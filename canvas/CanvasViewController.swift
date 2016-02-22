@@ -115,10 +115,26 @@ class CanvasViewController: UIViewController {
      
             
         } else if pinchGestureRecognizer.state == UIGestureRecognizerState.Changed {
-            
-            mySmileyView!.transform = CGAffineTransformMakeScale(pinchGestureRecognizer.scale, pinchGestureRecognizer.scale)
+            let scale = pinchGestureRecognizer.scale / log(pinchGestureRecognizer.scale)
+            mySmileyView!.transform = CGAffineTransformScale(mySmileyView!.transform, scale, scale)
 
         } else if pinchGestureRecognizer.state == UIGestureRecognizerState.Ended {
+            
+        }
+    }
+    
+    func onRotateSmiley(rotateGestureRecognizer: UIRotationGestureRecognizer) {
+        let mySmileyView = rotateGestureRecognizer.view
+        
+        if rotateGestureRecognizer.state == UIGestureRecognizerState.Began {
+            
+            
+        } else if rotateGestureRecognizer.state == UIGestureRecognizerState.Changed {
+            print("rotate changed")
+            
+            mySmileyView!.transform = CGAffineTransformRotate(mySmileyView!.transform, CGFloat(rotateGestureRecognizer.rotation * CGFloat(M_PI) / CGFloat(180)))
+            
+        } else if rotateGestureRecognizer.state == UIGestureRecognizerState.Ended {
             
         }
     }
@@ -145,6 +161,12 @@ class CanvasViewController: UIViewController {
             let newPinchRecognizer = UIPinchGestureRecognizer(target: self, action: "onPinchSmiley:")
             self.newlyCreatedFace.addGestureRecognizer(newPinchRecognizer)
             
+            let newRotateRecognizer = UIRotationGestureRecognizer(target: self, action: "onRotateSmiley:")
+            self.newlyCreatedFace.addGestureRecognizer(newRotateRecognizer)
+            
+            newPinchRecognizer.delegate = self
+            
+            
             
         } else if panGestureRecognizer.state == UIGestureRecognizerState.Changed {
             self.newlyCreatedFace.center = CGPoint(
@@ -159,3 +181,10 @@ class CanvasViewController: UIViewController {
 
 }
 
+extension CanvasViewController: UIGestureRecognizerDelegate {
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    
+}
