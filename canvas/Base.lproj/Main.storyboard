@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Canvas View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CanvasViewController" customModule="canvas" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBo-CU-8HF">
+                                <rect key="frame" x="0.0" y="368" width="320" height="200"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="down_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="EYq-xC-gSr">
+                                        <rect key="frame" x="150" y="8" width="20" height="14"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="dead" translatesAutoresizingMaskIntoConstraints="NO" id="zpw-EP-Tgy">
+                                        <rect key="frame" x="40" y="42" width="60" height="60"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="happy" translatesAutoresizingMaskIntoConstraints="NO" id="uB7-Nu-3o0">
+                                        <rect key="frame" x="220" y="42" width="60" height="60"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="excited" translatesAutoresizingMaskIntoConstraints="NO" id="gSd-iC-qlk">
+                                        <rect key="frame" x="130" y="42" width="60" height="60"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="tongue" translatesAutoresizingMaskIntoConstraints="NO" id="BUy-mX-BtB">
+                                        <rect key="frame" x="130" y="120" width="60" height="60"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sad" translatesAutoresizingMaskIntoConstraints="NO" id="6SF-xR-Etx">
+                                        <rect key="frame" x="40" y="120" width="60" height="60"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="wink" translatesAutoresizingMaskIntoConstraints="NO" id="Hwz-05-G4o">
+                                        <rect key="frame" x="220" y="120" width="60" height="60"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93413628110000002" green="0.93293917179999997" blue="0.95384968889999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="gSd-iC-qlk" firstAttribute="centerX" secondItem="gBo-CU-8HF" secondAttribute="centerX" id="3sy-vr-qBY"/>
+                                    <constraint firstItem="EYq-xC-gSr" firstAttribute="centerX" secondItem="gBo-CU-8HF" secondAttribute="centerX" id="BsE-EY-Seg"/>
+                                    <constraint firstAttribute="bottom" secondItem="BUy-mX-BtB" secondAttribute="bottom" constant="20" id="DYv-Tp-SAc"/>
+                                    <constraint firstItem="zpw-EP-Tgy" firstAttribute="leading" secondItem="gBo-CU-8HF" secondAttribute="leading" constant="40" id="M17-ct-HSS"/>
+                                    <constraint firstItem="uB7-Nu-3o0" firstAttribute="top" secondItem="zpw-EP-Tgy" secondAttribute="top" id="Mij-Wt-beH"/>
+                                    <constraint firstItem="6SF-xR-Etx" firstAttribute="trailing" secondItem="zpw-EP-Tgy" secondAttribute="trailing" id="Mue-HE-ttZ"/>
+                                    <constraint firstItem="Hwz-05-G4o" firstAttribute="trailing" secondItem="uB7-Nu-3o0" secondAttribute="trailing" id="O2B-8Y-ps7"/>
+                                    <constraint firstItem="BUy-mX-BtB" firstAttribute="bottom" secondItem="6SF-xR-Etx" secondAttribute="bottom" id="RGX-bw-Xkd"/>
+                                    <constraint firstItem="BUy-mX-BtB" firstAttribute="centerX" secondItem="gBo-CU-8HF" secondAttribute="centerX" id="SKg-wO-Tle"/>
+                                    <constraint firstItem="gSd-iC-qlk" firstAttribute="top" secondItem="EYq-xC-gSr" secondAttribute="bottom" constant="20" id="X4x-Bs-wmg"/>
+                                    <constraint firstItem="gSd-iC-qlk" firstAttribute="top" secondItem="zpw-EP-Tgy" secondAttribute="top" id="iTR-JE-yvE"/>
+                                    <constraint firstItem="Hwz-05-G4o" firstAttribute="bottom" secondItem="6SF-xR-Etx" secondAttribute="bottom" id="imc-w3-0KH"/>
+                                    <constraint firstItem="EYq-xC-gSr" firstAttribute="top" secondItem="gBo-CU-8HF" secondAttribute="top" constant="8" id="j2B-xN-iNy"/>
+                                    <constraint firstAttribute="height" constant="200" id="q3A-ca-AUY"/>
+                                    <constraint firstAttribute="trailing" secondItem="uB7-Nu-3o0" secondAttribute="trailing" constant="40" id="yPk-fk-Ja0"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Kpu-GG-OUd" appends="YES" id="DOT-Sg-rPx"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gBo-CU-8HF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6A0-nK-Lfq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gBo-CU-8HF" secondAttribute="bottom" id="9iH-pN-RbK"/>
+                            <constraint firstAttribute="trailing" secondItem="gBo-CU-8HF" secondAttribute="trailing" id="NLQ-9j-ePf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="trayView" destination="gBo-CU-8HF" id="1b1-09-xUH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Kpu-GG-OUd">
+                    <connections>
+                        <action selector="onTrayPanGesture:" destination="BYZ-38-t0r" id="ajI-Bm-vc3"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="130" y="299"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dead" width="60" height="60"/>
+        <image name="down_arrow" width="20" height="14"/>
+        <image name="excited" width="60" height="60"/>
+        <image name="happy" width="60" height="60"/>
+        <image name="sad" width="60" height="60"/>
+        <image name="tongue" width="60" height="60"/>
+        <image name="wink" width="60" height="60"/>
+    </resources>
+</document>
